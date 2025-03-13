@@ -26,14 +26,14 @@ This enhanced fork of DocLayout-YOLO provides a comprehensive document processin
 
 ## Installation
 ### Prerequisites
-```bash
+``bash
 
 Model Download
 
   # Download pretrained model
   wget https://huggingface.co/juliozhao/DocLayout-YOLO-DocStructBench/resolve/main/doclayout_yolo_docstructbench_imgsz1024.pt
 
-pip install -r requirements.txt
+
 pdf2image pytesseract torch>=2.0.0 ultralytics>=8.0.0
 
 Quick Start
