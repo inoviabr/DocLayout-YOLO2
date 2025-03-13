@@ -26,23 +26,23 @@ This enhanced fork of DocLayout-YOLO provides a comprehensive document processin
 
 ## Installation
 ### Prerequisites
-``bash
+
 
 Model Download
 
-  # Download pretrained model
-  wget https://huggingface.co/juliozhao/DocLayout-YOLO-DocStructBench/resolve/main/doclayout_yolo_docstructbench_imgsz1024.pt
-
-
-pdf2image pytesseract torch>=2.0.0 ultralytics>=8.0.0
-
-Quick Start
-Full Processing Pipeline
-
-python pipeline.py \
-  --pdf_folder input_documents \
-  --output_folder analysis_results \
-  --ocr_lang eng
+    # Download pretrained model
+    wget https://huggingface.co/juliozhao/DocLayout-YOLO-DocStructBench/resolve/main/doclayout_yolo_docstructbench_imgsz1024.pt
+  
+  
+  pdf2image pytesseract torch>=2.0.0 ultralytics>=8.0.0
+  
+  Quick Start
+    Full Processing Pipeline
+    
+    python pipeline.py \
+      --pdf_folder input_documents \
+      --output_folder analysis_results \
+      --ocr_lang eng
 
 Text Region Extraction
 
@@ -51,11 +51,11 @@ Text Region Extraction
       --output_folder extracted_regions
 
 Batch Image Processing
-
-  python process_images.py \
-  --model doclayout_yolo_docstructbench_imgsz1024.pt \
-  --image-path input_images \
-  --res-path processed_output
+  
+    python process_images.py \
+    --model doclayout_yolo_docstructbench_imgsz1024.pt \
+    --image-path input_images \
+    --res-path processed_output
 
 Project Structure
  
@@ -82,15 +82,15 @@ Tesseract OCR integration
 
 Multi-threaded processing
 
-Parameters:
+# Parameters:
 
-      | Argument        | Description             | Default
-      |-----------------|-------------------------|-----------|
-      | --pdf_folder    | Input PDF directory	    | Required  |
-      | --output_folder | Results directory	      | Required  |
-      | --ocr_lang      | Tesseract language code | eng       |  
-
-extract_plain_text.py
+      |    Argument     |       Description         |   Default      
+      | --pdf_folder    |  Input PDF directory	|   Required  
+      | --output_folder |  Results directory	|   Required  
+      | --ocr_lang      |  Tesseract language code  |    eng        
+      
+      
+     
 
 Project Execution
 Basic Workflow
@@ -122,56 +122,58 @@ Supported Formats:
 
 Advanced Configuration
 
-Performance Optimization 
-  # Example GPU configuration
-    model.predict(
-    image_path,
-    imgsz=2048,
-    conf=0.25,
-    device="cuda:0",
-    half_precision=True
-)
+# Performance Optimization 
+     Example GPU configuration
+      model.predict(
+          image_path,
+          imgsz=2048,
+          conf=0.25,
+          device="cuda:0",
+          half_precision=True
+      )
 
-OCR Language Support
-  Language	Code	Requirements
-  -----------------------------------
-  English	eng	Default
-  -----------------------------------
-  Portuguese	por	tesseract-ocr-por
-  -----------------------------------
-  Spanish	spa	tesseract-ocr-spa
-  -----------------------------------
+# OCR Language Support
 
-Modification Overview
+    Language	  |     Code	     |    Requirements
+    -----------------------------------------------------
+    English	    |     eng	       |    Default
+    -----------------------------------------------------
+    Portuguese  |	    por	       |    tesseract-ocr-por
+    -----------------------------------------------------
+    Spanish	    |     spa	       |    tesseract-ocr-spa
+    -----------------------------------------------------
 
-  Original File	Enhancements
-  ------------------------------------------------------------------------
-  demo.py	Added directory preservation, process tracking
-  ------------------------------------------------------------------------
-  format_docsynth300k.py	Improved error handling, Windows compatibility
-  ------------------------------------------------------------------------
-  New Modules	pipeline.py, extract_plain_text.py, process_images.py
-  ------------------------------------------------------------------------
+# Modification Overview
+  
+    Original File	           Enhancements      
+    ------------------------------------------------------------------------------
+    demo.py	                 Added directory preservation, process tracking
+    ------------------------------------------------------------------------------
+    format_docsynth300k.py	 Improved error handling, Windows compatibility
+    -------------------------------------------------------------------------------
+    New Modules	             pipeline.py, extract_plain_text.py, process_images.py
+    -------------------------------------------------------------------------------
 
 Contribution Guidelines
 
-We welcome contributions through:
-
-  1.ssue reporting
-
-  2.Feature requests
-
-  3.Pull requests
+# We welcome contributions through:
+  
+    1.Issue reporting
+  
+    2.Feature requests
+  
+    3.Pull requests
 
 Please follow standard GitHub workflow:
-  git checkout -b feature/new-feature
-  git commit -m "Descriptive message"
-  git push origin feature/new-feature
 
-License
-  This project maintains the original MIT License. For commercial use inquiries, please contact the maintainers.
-
-Documentation
+      git checkout -b feature/new-feature
+      git commit -m "Descriptive message"
+      git push origin feature/new-feature
+    
+    License
+      This project maintains the original MIT License. For commercial use inquiries, please contact the maintainers.
+    
+    Documentation
   For original model architecture and training details, consult the https://github.com/opendatalab/DocLayout-YOLO.
 
 
