@@ -164,7 +164,7 @@ Contribution Guidelines
   
     3.Pull requests
 
-Please follow standard GitHub workflow:
+# Please follow standard GitHub workflow:
 
       git checkout -b feature/new-feature
       git commit -m "Descriptive message"
@@ -173,7 +173,8 @@ Please follow standard GitHub workflow:
     License
       This project maintains the original MIT License. For commercial use inquiries, please contact the maintainers.
     
-    Documentation
-  For original model architecture and training details, consult the https://github.com/opendatalab/DocLayout-YOLO.
+   # Documentation
+         
+    For original model architecture and training details, consult the https://github.com/opendatalab/DocLayout-YOLO.
 
 
