@@ -38,7 +38,7 @@ python pipeline.py \
   --ocr_lang eng
 ```
 
-### **<<Figure Extraction>>** **<<<**
+### Figure Extraction
 ```bash
 python extract_figures.py \
   --input_folder document_images \
