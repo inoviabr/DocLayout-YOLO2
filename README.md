@@ -1,3 +1,6 @@
+Segue o conteúdo do README.md atualizado com as instruções de uso do Docker. Basta copiar e colar o conteúdo no VSCode:
+
+```markdown
 <div align="center">
 <h1>DocLayout-YOLO Enhanced: Advanced Document Analysis Pipeline</h1>
 
@@ -102,5 +105,50 @@ Supported element classes:
 | **<<New Module>>**  | **<<extract_figures.py>>**        | **<<<**
 | pipeline.py         | Added figure extraction support   | **<<<**
 
+## Running with Docker
+
+This project supports Docker for easy deployment and execution. Follow the instructions below to build and run the container on your machine.
+
+### Prerequisites
+Ensure that Docker and Docker Compose are installed. Verify your installations with:
+
+```bash
+docker --version
+docker-compose --version
+```
+
+### Building the Docker Image
+To build the Docker image without using cache, run:
+
+```bash
+docker-compose build --no-cache
+```
+
+### Running the Docker Container
+To run the container, set the environment variables for your input and output directories and then execute:
+
+```bash
+INPUT_PDFS="/path/to/input_pdfs" OUTPUT_FOLDER="/path/to/output" docker-compose up
+```
+
+Replace `/path/to/input_pdfs` and `/path/to/output` with the correct paths on your machine.
+
+### Stopping the Container
+To stop the container, execute:
+
+```bash
+docker-compose down
+```
+
+### Viewing Logs
+For monitoring logs in real time, use:
+
+```bash
+docker-compose logs -f
+```
+
 ## Documentation
- For original model architecture and training details, consult the https://github.com/opendatalab/DocLayout-YOLO.
+For original model architecture and training details, consult the [DocLayout-YOLO repository](https://github.com/opendatalab/DocLayout-YOLO).
+```
+
+Essa versão já está pronta para ser utilizada no VSCode. Caso necessite de mais alguma alteração, estou à disposição!
