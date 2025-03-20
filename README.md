@@ -1,4 +1,3 @@
-
 <div align="center">
 <h1>DocLayout-YOLO Enhanced: Advanced Document Analysis Pipeline</h1>
 
@@ -39,7 +38,7 @@ python pipeline.py \
   --ocr_lang eng
 ```
 
-### **<<Figure Extraction>>** **<<<**
+### Figure Extraction
 ```bash
 python extract_figures.py \
   --input_folder document_images \
@@ -66,7 +65,7 @@ python extract_plain_text.py \
 
 ## Implementation Details
 ### Core Modules
-#### **<<extract_figures.py>>** **<<<**
+#### extract_figures.py
 ```python
 Function: Extracts graphical elements from documents
 Features:
@@ -84,7 +83,7 @@ python extract_figures.py \
 | Element Type    | Detection Script          | Output Format |
 |-----------------|---------------------------|---------------|
 | Text Regions    | extract_plain_text.py     | PNG + CSV     |
-| **<<Figures>>** | **<<extract_figures.py>>**| PNG + Log     | **<<<**
+| Figures | extract_figures.py| PNG + Log     | **<<<**
 | Tables          | pipeline.py               | PNG + JSON    |
 
 ## Advanced Configuration
@@ -100,7 +99,7 @@ Supported element classes:
 ## Modification Overview
 | Original File       | Enhancements                      |
 |---------------------|-----------------------------------|
-| **<<New Module>>**  | **<<extract_figures.py>>**        | **<<<**
+| New Module | extract_figures.py       | **<<<**
 | pipeline.py         | Added figure extraction support   | **<<<**
 
 ## Running with Docker
@@ -132,19 +131,19 @@ INPUT_PDFS="/path/to/input_pdfs" OUTPUT_FOLDER="/path/to/output" docker-compose 
 Replace `/path/to/input_pdfs` and `/path/to/output` with the correct paths on your machine.
 
 ### Stopping the Container
-To stop the container, execute:
+    To stop the container, execute:
 
 ```bash
 docker-compose down
 ```
 
 ### Viewing Logs
-For monitoring logs in real time, use:
+    For monitoring logs in real time, use:
 
 ```bash
 docker-compose logs -f
 ```
 
 ## Documentation
-For original model architecture and training details, consult the [DocLayout-YOLO repository](https://github.com/opendatalab/DocLayout-YOLO).
+    For original model architecture and training details, consult the [DocLayout-YOLO repository](https://github.com/opendatalab/DocLayout-YOLO).
 ```
