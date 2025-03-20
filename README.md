@@ -1,6 +1,4 @@
-Segue o conteúdo do README.md atualizado com as instruções de uso do Docker. Basta copiar e colar o conteúdo no VSCode:
 
-```markdown
 <div align="center">
 <h1>DocLayout-YOLO Enhanced: Advanced Document Analysis Pipeline</h1>
 
@@ -150,5 +148,3 @@ docker-compose logs -f
 ## Documentation
 For original model architecture and training details, consult the [DocLayout-YOLO repository](https://github.com/opendatalab/DocLayout-YOLO).
 ```
-
-Essa versão já está pronta para ser utilizada no VSCode. Caso necessite de mais alguma alteração, estou à disposição!
