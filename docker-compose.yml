@@ -1,0 +1,9 @@
+services:
+  doclayout:
+    build: .
+    environment:
+      - OCR_LANG=${OCR_LANG:-por}
+    volumes:
+      - ${INPUT_PDFS:-./input_pdfs}:/app/input_pdfs
+      - ${OUTPUT_FOLDER:-./results}:/app/results
+    command: python pipeline.py --pdf_folder /app/input_pdfs --output_folder /app/results --ocr_lang ${OCR_LANG:-por}
